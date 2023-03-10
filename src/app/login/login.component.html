@@ -1,0 +1,35 @@
+<div class="login-background">
+    <div class="login-container">
+      <div class="login-card">
+        <h2>Login</h2>
+        <form (ngSubmit)="login()" #loginForm="ngForm">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" [(ngModel)]="username" name="username" id="username"
+              required minlength="3">
+            <div *ngIf="loginForm.controls['username']?.invalid && (loginForm.controls['username']?.dirty || loginForm.submitted)"
+              class="error">
+              <div *ngIf="loginForm.controls['username'].errors?.['required']">Username is required</div>
+              <div *ngIf="loginForm.controls['username'].errors?.['required']">Username must be at least 3 characters long</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="password" name="password" id="password"
+              required minlength="6">
+            <div *ngIf="loginForm.controls['password']?.invalid && (loginForm.controls['password']?.dirty || loginForm.submitted)"
+              class="error">
+              <div *ngIf="loginForm.controls['password'].errors?.['required']">Password is required</div>
+              <div *ngIf="loginForm.controls['password'].errors?.['minlength']">Password must be at least 8 characters long</div>
+            </div>
+          </div>
+          <br>
+          <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Login</button>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  

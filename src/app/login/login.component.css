@@ -1,0 +1,28 @@
+.login-background {
+    background-image: url("https://images.unsplash.com/photo-1619658535018-5a55d32e4628?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=401&q=80");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .login-container {
+    margin-top: 10%;
+    text-align: center;
+  }
+  
+  .login-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+  }
+  
+  .btn{
+    margin-left:15px;
+  }
